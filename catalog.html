@@ -8,11 +8,11 @@
 
 <body>
   <header>
-    <span><a href="index.html"><img src="https://via.placeholder.com/150x100" alt="logo"></a></span>
+    <a href="index.html"><img src="https://via.placeholder.com/150x100" alt="logo"></a>
     <span>Поиск:</span>
     <ul>
       <li><a href="#">Закладки: 0</a></li>
-      <li><a href="#">Корзина: 0</a></li>
+      <li><a href="#">Корзина: 10</a></li>
       <li><a href="#">Оформить заказ</a></li>
     </ul>
 
@@ -37,7 +37,7 @@
 
   <main>
     <ul>
-      <li><img src="#" alt="home"></li>
+      <li><a href="index.html"><img src="#" alt="Главная страница"></a></li>
       <li><a href="#">Каталог</a> </li>
       <li><a href="#">Инструмент</a></li>
       <li><a href="#">Перфораторы</a></li>
@@ -46,31 +46,31 @@
 
     <aside>
       <div>ФИЛЬТР:</div>
-      <form method="post" action="#"></form>
-      <fieldset>
-        <h4>ЦЕНА:</h4>
-        <div><input type="range" id="price" name="price" min="0" max="30000"></div>
-        <span>0</span>
-        <span>-</span>
-        <span>30000</span>
-      </fieldset>
+      <form method="post" action="#">
+        <fieldset>
+          <h4>ЦЕНА:</h4>
+          <div><input type="range" id="price" name="price" min="0" max="30000"></div>
+          <input type="number" id="minprice" name="minprice" min="0" max="30000" value="0">
+          <span>-</span>
+          <input type="number" id="maxprice" name="maxprice" min="0" max="30000" value="30000">
+        </fieldset>
 
-      <fieldset>
-        <h4>ПРОИЗВОДИТЕЛИ:</h4>
-        <label><input type="checkbox" name="option1" value="a1" checked>BOSCH</label>
-        <label><input type="checkbox" name="option2" value="a2">ИНТЕРСКОЛ</label>
-        <label><input type="checkbox" name="option3" value="a3" checked>MAKIta</label>
-        <label><input type="checkbox" name="option4" value="a4">Dewalt</label>
-        <label><input type="checkbox" name="option5" value="a5">Hitachi</label>
-      </fieldset>
+        <fieldset>
+          <h4>ПРОИЗВОДИТЕЛИ:</h4>
+          <label><input type="checkbox" name="option1" value="a1" checked>BOSCH</label>
+          <label><input type="checkbox" name="option2" value="a2">ИНТЕРСКОЛ</label>
+          <label><input type="checkbox" name="option3" value="a3" checked>MAKIta</label>
+          <label><input type="checkbox" name="option4" value="a4">Dewalt</label>
+          <label><input type="checkbox" name="option5" value="a5">Hitachi</label>
+        </fieldset>
 
-      <fieldset>
-        <h4>ПИТАНИЕ:</h4>
-        <label><input type="radio" name="option6" value="a6">Аккумуляторные</label>
-        <label><input type="radio" name="option6" value="a7">Сетевые</label>
-      </fieldset>
+        <fieldset>
+          <h4>ПИТАНИЕ:</h4>
+          <label><input type="radio" name="option6" value="a6">Аккумуляторные</label>
+          <label><input type="radio" name="option6" value="a7">Сетевые</label>
+        </fieldset>
 
-      <button>ПОКАЗАТЬ</button>
+        <button>ПОКАЗАТЬ</button>
       </form>
     </aside>
 
@@ -78,14 +78,19 @@
       <div>
         <p>СОРТИРОВКА:</p>
         <ul>
-          <li>ПО ЦЕНЕ</li>
-          <li>ПО ТИПУ</li>
-          <li>ПО ФУНКЦИОНАЛУ</li>
-          <li><button type="button"><img src="https://via.placeholder.com/150x100" alt="up-arrow"></button></li>
-          <li><button type="button"><img src="https://via.placeholder.com/150x100" alt="down-arrow"></button></li>
+          <li><a href="#">По цене</a></li>
+          <li><a href="#">По типу</a></li>
+          <li><a href="#">По функционалу</a></li>
+        </ul>
+        <ul>
+          <li><a href="#"><img src="https://via.placeholder.com/150x100" alt="up-arrow"></a></li>
+          <li><a href="#"><img src="https://via.placeholder.com/150x100" alt="down-arrow"></a></li>
         </ul>
       </div>
+
       <article>
+        <button type="button">Купить</button>
+        <button type="button">В закладки</button>
         <img src="https://via.placeholder.com/150x100" alt="item">
         <h3>Перфоратор BOSCH BFG 3000</h3>
         <div>22500 Р.</div>
@@ -93,6 +98,8 @@
       </article>
 
       <article>
+        <button type="button">Купить</button>
+        <button type="button">В закладки</button>
         <img src="https://via.placeholder.com/150x100" alt="item">
         <h3>Перфоратор BOSCH BFG 6000</h3>
         <div>22500 Р.</div>
@@ -100,8 +107,7 @@
       </article>
 
       <article>
-        <div><img src="https://via.placeholder.com/150x100" alt="new"></div>
-        <button type="button">КУПИТЬ</button>
+        <button type="button">Купить</button>
         <button type="button">В закладки</button>
         <h3>Перфоратор BOSCH BFG 2000</h3>
         <div>15500 Р.</div>
@@ -119,16 +125,16 @@
     <div>
       <h2>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
       <p>
-        Перфоратор — универсальный строительный инструмент. Предназначен для сверления и
-        долбления отверстий в кирпиче, бетоне и камне. Существуют электромеханические и пневматические перфораторы.
-        Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть
-        выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+        Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче,
+        бетоне и камне. Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять
+        функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном
+        устройстве будут совмещены отбойный молоток и ударная дрель.
       </p>
     </div>
   </main>
 
   <footer>
-    <span><a><img src="https://via.placeholder.com/150x100" alt="logo"></a></span>
+    <a><img src="https://via.placeholder.com/150x100" alt="logo"></a>
     <ul>
       <li><a href="#">Компания</a></li>
       <li><a href="catalog.html">Каталог</a></li>
@@ -146,12 +152,14 @@
       <li><a href="#">Инструмент</a></li>
       <li><a href="#">Спецпредложения</a></li>
     </ul>
-    <p>© 2010–2019 Компания «Техномарт» <br> Все права защищены</p>
-    <a href="#"><img src="#" alt="vk"></a>
-    <a href="#"><img src="#" alt="fb"></a>
-    <a href="#"><img src="#" alt="inst"></a>
-    <p>Обратная связь: <br> <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
-    <p>Разработано — <br> <a href="https://htmlacademy.ru/">htmlacademy.ru</a> </p>
+    <p>© 2010–2019 Компания «Техномарт» Все права защищены</p>
+    <ul>
+      <li><a href="#"><img src="#" alt="vk"></a></li>
+      <li><a href="#"><img src="#" alt="fb"></a></li>
+      <li><a href="#"><img src="#" alt="inst"></a></li>
+    </ul>
+    <p>Обратная связь: <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
+    <p>Разработано — <a href="https://htmlacademy.ru/">htmlacademy.ru</a> </p>
   </footer>
 </body>
 
