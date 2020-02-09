@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
-* Студент: [Yurii Androsiuk](https://up.htmlacademy.ru/htmlcss/27/user/617977).
-* Наставник: `Евгений Алипкин`.
+- Студент: [Yurii Androsiuk](https://up.htmlacademy.ru/htmlcss/27/user/617977).
+- Наставник: `Евгений Алипкин`.
 
 ---
 

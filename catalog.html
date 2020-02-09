@@ -2,43 +2,48 @@
 <html lang="ru">
 
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>HTML Academy: Техномарт</title>
+  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,700|PT+Sans:400,700&display=swap&subset=cyrillic"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
   <header>
-    <a href="index.html"><img src="img/logo-technomart.svg" alt="logo"></a>
-    <span>
-      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
-        <path fill="#ffffff"
-          d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z" />
-      </svg>
-      Поиск:
-    </span>
-    <ul>
-      <li>
-        <a href="#">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16">
-            <path fill="#ffffff"
-              d="M14 15c0 .55-.368.741-.818.426l-5.363-3.765c-.45-.315-1.187-.315-1.637 0L.818 15.426C.368 15.741 0 15.55 0 15V1c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v14z" />
-          </svg>
-          Закладки: 0
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
-            <circle fill="#ffffff" cx="4.5" cy="13.5" r="1.5" />
-            <circle fill="#ffffff" cx="12.5" cy="13.5" r="1.5" />
-            <path fill="#ffffff" d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z" />
-          </svg>
-          Корзина: 10
-        </a>
-      </li>
-      <li><a href="#">Оформить заказ</a></li>
-    </ul>
-
+    <div class="top-nav">
+      <a href="index.html"><img src="img/logo-technomart.svg" alt="logo" /></a>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+          <path fill="#ffffff"
+            d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z" />
+        </svg>
+        Поиск:
+      </span>
+      <ul>
+        <li>
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16">
+              <path fill="#ffffff"
+                d="M14 15c0 .55-.368.741-.818.426l-5.363-3.765c-.45-.315-1.187-.315-1.637 0L.818 15.426C.368 15.741 0 15.55 0 15V1c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v14z" />
+            </svg>
+            Закладки: 0
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+              <circle fill="#ffffff" cx="4.5" cy="13.5" r="1.5" />
+              <circle fill="#ffffff" cx="12.5" cy="13.5" r="1.5" />
+              <path fill="#ffffff" d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z" />
+            </svg>
+            Корзина: 10
+          </a>
+        </li>
+        <li><a href="#">Оформить заказ</a></li>
+      </ul>
+    </div>
     <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
     <a href="tel:+78125550555">
       <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
@@ -115,25 +120,27 @@
       <form method="post" action="#">
         <fieldset>
           <h4>ЦЕНА:</h4>
-          <div><input type="range" id="price" name="price" min="0" max="30000"></div>
-          <input type="number" id="minprice" name="minprice" min="0" max="30000" value="0">
+          <div>
+            <input type="range" id="price" name="price" min="0" max="30000" />
+          </div>
+          <input type="number" id="minprice" name="minprice" min="0" max="30000" value="0" />
           <span>-</span>
-          <input type="number" id="maxprice" name="maxprice" min="0" max="30000" value="30000">
+          <input type="number" id="maxprice" name="maxprice" min="0" max="30000" value="30000" />
         </fieldset>
 
         <fieldset>
           <h4>ПРОИЗВОДИТЕЛИ:</h4>
-          <label><input type="checkbox" name="option1" value="a1" checked>BOSCH</label>
-          <label><input type="checkbox" name="option2" value="a2">ИНТЕРСКОЛ</label>
-          <label><input type="checkbox" name="option3" value="a3" checked>MAKIta</label>
-          <label><input type="checkbox" name="option4" value="a4">Dewalt</label>
-          <label><input type="checkbox" name="option5" value="a5">Hitachi</label>
+          <label><input type="checkbox" name="option1" value="a1" checked />BOSCH</label>
+          <label><input type="checkbox" name="option2" value="a2" />ИНТЕРСКОЛ</label>
+          <label><input type="checkbox" name="option3" value="a3" checked />MAKIta</label>
+          <label><input type="checkbox" name="option4" value="a4" />Dewalt</label>
+          <label><input type="checkbox" name="option5" value="a5" />Hitachi</label>
         </fieldset>
 
         <fieldset>
           <h4>ПИТАНИЕ:</h4>
-          <label><input type="radio" name="option6" value="a6">Аккумуляторные</label>
-          <label><input type="radio" name="option6" value="a7">Сетевые</label>
+          <label><input type="radio" name="option6" value="a6" />Аккумуляторные</label>
+          <label><input type="radio" name="option6" value="a7" />Сетевые</label>
         </fieldset>
 
         <button>ПОКАЗАТЬ</button>
@@ -169,7 +176,7 @@
       <article>
         <button type="button">Купить</button>
         <button type="button">В закладки</button>
-        <img src="img/Perforator_1.jpg" alt="item">
+        <img src="img/Perforator_1.jpg" alt="item" />
         <h3>Перфоратор BOSCH BFG 3000</h3>
         <div>22500 Р.</div>
         <div>15500 Р.</div>
@@ -178,7 +185,7 @@
       <article>
         <button type="button">Купить</button>
         <button type="button">В закладки</button>
-        <img src="img/Perforator_2.jpg" alt="item">
+        <img src="img/Perforator_2.jpg" alt="item" />
         <h3>Перфоратор BOSCH BFG 6000</h3>
         <div>22500 Р.</div>
         <div>15500 Р.</div>
@@ -194,7 +201,7 @@
       <article>
         <button type="button">Купить</button>
         <button type="button">В закладки</button>
-        <img src="img/Perforator_3.jpg" alt="item">
+        <img src="img/Perforator_3.jpg" alt="item" />
         <h3>Перфоратор BOSCH BFG 6000</h3>
         <div>22500 Р.</div>
         <div>15500 Р.</div>
@@ -203,7 +210,7 @@
       <article>
         <button type="button">Купить</button>
         <button type="button">В закладки</button>
-        <img src="img/Perforator_4.jpg" alt="item">
+        <img src="img/Perforator_4.jpg" alt="item" />
         <h3>Перфоратор BOSCH BFG 6000</h3>
         <div>22500 Р.</div>
         <div>15500 Р.</div>
@@ -220,16 +227,18 @@
     <div>
       <h2>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
       <p>
-        Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче,
-        бетоне и камне. Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять
-        функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном
-        устройстве будут совмещены отбойный молоток и ударная дрель.
+        Перфоратор — универсальный строительный инструмент. Предназначен для
+        сверления и долбления отверстий в кирпиче, бетоне и камне. Существуют
+        электромеханические и пневматические перфораторы. Современные модели
+        могут выполнять функции дрели, шуруповерта и отбойного молотка. В
+        ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве
+        будут совмещены отбойный молоток и ударная дрель.
       </p>
     </div>
   </main>
 
   <footer>
-    <a><img src="img/logo-technomart.svg" alt="logo"></a>
+    <a><img src="img/logo-technomart.svg" alt="logo" /></a>
     <ul>
       <li><a href="#">Компания</a></li>
       <li><a href="catalog.html">Каталог</a></li>
@@ -273,13 +282,16 @@
         </a>
       </li>
     </ul>
-    <p>Обратная связь: <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
-    <p>Разработано — <a href="https://htmlacademy.ru/">htmlacademy.ru</a> </p>
+    <p>
+      Обратная связь:
+      <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+    </p>
+    <p>Разработано — <a href="https://htmlacademy.ru/">htmlacademy.ru</a></p>
   </footer>
 
   <!--Попап начало-->
   <div>
-    <img src="img/icon-mark.svg" alt="">
+    <img src="img/icon-mark.svg" alt="" />
     <p>Товар добавлен в корзину!</p>
     <button type="button">Оформить заказ</button>
     <button type="button">Продолжить покупки</button>
@@ -293,7 +305,6 @@
     </button>
   </div>
   <!--Попап конец-->
-
 </body>
 
 </html>
