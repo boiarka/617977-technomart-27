@@ -102,7 +102,7 @@
 
   <main>
     <section class="promo container">
-      <div class="promo-materials">
+      <div class="promo-materials promo-block">
         <h4>Материалы</h4>
         <div class="promo-tagline">на любой вкус</div>
         <svg xmlns="http://www.w3.org/2000/svg" width="44" height="65" viewBox="0 0 44 65">
@@ -115,7 +115,7 @@
         </svg>
       </div>
 
-      <div class="promo-tool">
+      <div class="promo-tool promo-block">
         <h4>Инструмент</h4>
         <div class="promo-tagline">на все случаи</div>
         <svg xmlns="http://www.w3.org/2000/svg" width="75" height="61" viewBox="0 0 75 61">
@@ -126,7 +126,7 @@
         </svg>
       </div>
 
-      <div class="promo-equipment">
+      <div class="promo-equipment promo-block">
         <h4>Техника</h4>
         <div class="promo-tagline">для стройки</div>
         <svg xmlns="http://www.w3.org/2000/svg" width="78" height="62" viewBox="0 0 78 62">
@@ -141,61 +141,68 @@
 
       <div class="promo-slider">
         <div>
-          <h3>Дрели</h3>
-          <div class="promo-slider__tagline">Соседям на радость!</div>
+          <div class="promo-slider__header">
+            <h3>Дрели</h3>
+            <div class="promo-slider__tagline">Соседям на радость!</div>
+          </div>
           <img src="img/slider1.jpg" alt="img" />
           <a class="promo-slider__link" href="catalog.html">Открыть каталог</a>
         </div>
-        <div>
+
+        <!-- <div>
           <h3>Перфораторы</h3>
           <div class="promo-slider__tagline">Настоящие мужские игрушки</div>
           <img src="img/slider2.jpg" alt="img" />
           <a class="promo-slider__link" href="catalog.html">Открыть каталог</a>
-        </div>
-        <button>
+								</div> -->
+
+        <button class="slider-button__left">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="40" viewBox="0 0 22 40">
             <path fill="#FFF" d="M19.83-.035l2.089 2.099L4.13 19.947l17.847 17.939-2.09 2.099L-.048 19.947z" />
           </svg>
         </button>
-        <button>
+        <button class="slider-button__right">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="40" viewBox="0 0 22 40">
             <path fill="#FFF" d="M2.098-.035L.009 2.064l17.789 17.883L-.048 37.886l2.089 2.099 19.935-20.038z" />
           </svg>
         </button>
-        <ul>
+        <ul class="promo-slider__dots">
           <li>dot1</li>
           <li>dot2</li>
         </ul>
       </div>
 
-      <div class="promo-discounts">
-        <h4>Скидки 50%</h4>
-        <div class="promo-tagline">На 350 товаров</div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="59" height="72" viewBox="0 0 59 72">
-          <g fill="#FFF">
-            <path
-              d="M58.34 20.545a2.997 2.997 0 0 0-2.396-1.195h-38.67l-2.475-7.385H3.058a3 3 0 1 0 0 6h7.424l13.5 40.285h25.159a3 3 0 1 0 0-6H28.299l-1.726-5.149h23.12a3.001 3.001 0 0 0 2.884-2.172l6.25-21.75a3.005 3.005 0 0 0-.487-2.634zm-7.781 9.681h-4.81V25.35h6.211l-1.401 4.876zm-17.617 0V25.35h6.807v4.875h-6.807zm6.807 6v4.875h-6.807v-4.875h6.807zM26.942 25.35v4.875h-6.023l-1.634-4.875h7.657zm-4.013 10.876h4.013v4.875h-2.379l-1.634-4.875zm22.82 4.875v-4.875h3.086l-1.401 4.875h-1.685z" />
-            <circle cx="27.406" cy="66.094" r="5.781" />
-            <circle cx="44.844" cy="66.094" r="5.781" />
-            <path
-              d="M29.335 9.699l7.547 5.492a1.986 1.986 0 0 0 2.818-.494c.646-.936.43-2.232-.48-2.895l-2.373-1.726 9.436-5.09L50.911 17h4.347L49.214 1.309A2.051 2.051 0 0 0 48.037.126a1.97 1.97 0 0 0-1.643.109L33.146 7.382l-3.022-2.199a1.986 1.986 0 0 0-2.742.39l-8.481 10.798a2.176 2.176 0 0 0-.405.628h5.106l5.733-7.3z" />
-          </g>
-        </svg>
+      <div class="slider-left">
+        <div class="promo-discounts promo-block">
+          <h4>Скидки 50%</h4>
+          <div class="promo-tagline">На 350 товаров</div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="59" height="72" viewBox="0 0 59 72">
+            <g fill="#FFF">
+              <path
+                d="M58.34 20.545a2.997 2.997 0 0 0-2.396-1.195h-38.67l-2.475-7.385H3.058a3 3 0 1 0 0 6h7.424l13.5 40.285h25.159a3 3 0 1 0 0-6H28.299l-1.726-5.149h23.12a3.001 3.001 0 0 0 2.884-2.172l6.25-21.75a3.005 3.005 0 0 0-.487-2.634zm-7.781 9.681h-4.81V25.35h6.211l-1.401 4.876zm-17.617 0V25.35h6.807v4.875h-6.807zm6.807 6v4.875h-6.807v-4.875h6.807zM26.942 25.35v4.875h-6.023l-1.634-4.875h7.657zm-4.013 10.876h4.013v4.875h-2.379l-1.634-4.875zm22.82 4.875v-4.875h3.086l-1.401 4.875h-1.685z" />
+              <circle cx="27.406" cy="66.094" r="5.781" />
+              <circle cx="44.844" cy="66.094" r="5.781" />
+              <path
+                d="M29.335 9.699l7.547 5.492a1.986 1.986 0 0 0 2.818-.494c.646-.936.43-2.232-.48-2.895l-2.373-1.726 9.436-5.09L50.911 17h4.347L49.214 1.309A2.051 2.051 0 0 0 48.037.126a1.97 1.97 0 0 0-1.643.109L33.146 7.382l-3.022-2.199a1.986 1.986 0 0 0-2.742.39l-8.481 10.798a2.176 2.176 0 0 0-.405.628h5.106l5.733-7.3z" />
+            </g>
+          </svg>
+        </div>
+
+        <div class="promo-delivery promo-block">
+          <h4>Доставка</h4>
+          <div class="promo-tagline">бесплатно</div>
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="78" height="63"
+            viewBox="0 0 78 63">
+            <g fill="#FFF">
+              <circle cx="25.983" cy="55.5" r="7.5" />
+              <circle cx="59.982" cy="55.5" r="7.5" />
+              <path
+                d="M64 0H11.062c-3.188 0-3 3.125-3 3.125V8H3.469a3.469 3.469 0 1 0 0 6.938l28.085 1.84.196.043c-.761 3.197-8.938 3.805-8.938 3.805l-8.31.428H5.446a3.375 3.375 0 1 0 0 6.75l23.656 1.254c-.807 3.153-6.29 3.756-6.29 3.756l-14.751.76v15.615c0 3.188 2.564 3.812 2.564 3.812h2.099c1.173-6.261 6.659-11 13.259-11s12.085 4.739 13.259 11h7.404c1.174-6.261 6.66-11 13.26-11 6.601 0 12.086 4.739 13.26 11h1.709C77.812 53 78 48.938 78 48.938v-15.25C78 14.812 64 0 64 0zM52 23.938v-15h10.062l5.75 15H52z" />
+            </g>
+          </svg>
+        </div>
       </div>
 
-      <div class="promo-delivery">
-        <h4>Доставка</h4>
-        <div class="promo-tagline">бесплатно</div>
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="78" height="63"
-          viewBox="0 0 78 63">
-          <g fill="#FFF">
-            <circle cx="25.983" cy="55.5" r="7.5" />
-            <circle cx="59.982" cy="55.5" r="7.5" />
-            <path
-              d="M64 0H11.062c-3.188 0-3 3.125-3 3.125V8H3.469a3.469 3.469 0 1 0 0 6.938l28.085 1.84.196.043c-.761 3.197-8.938 3.805-8.938 3.805l-8.31.428H5.446a3.375 3.375 0 1 0 0 6.75l23.656 1.254c-.807 3.153-6.29 3.756-6.29 3.756l-14.751.76v15.615c0 3.188 2.564 3.812 2.564 3.812h2.099c1.173-6.261 6.659-11 13.259-11s12.085 4.739 13.259 11h7.404c1.174-6.261 6.66-11 13.26-11 6.601 0 12.086 4.739 13.26 11h1.709C77.812 53 78 48.938 78 48.938v-15.25C78 14.812 64 0 64 0zM52 23.938v-15h10.062l5.75 15H52z" />
-          </g>
-        </svg>
-      </div>
     </section>
 
     <section class="goods container">

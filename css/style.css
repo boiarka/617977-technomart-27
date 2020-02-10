@@ -28,6 +28,7 @@ h2 {
 
 header {
   padding-bottom: 60px;
+  margin-bottom: 60px;
 }
 
 header,
@@ -191,6 +192,50 @@ nav a:hover {
   background-color: #293449;
 }
 
+.promo {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+}
+
+
+.promo-slider {
+  margin-top: 20px;
+  width: 620px;
+  height: 266px;
+  position: relative;
+}
+
+.promo-slider img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.promo-slider__header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  color: #fff;
+  padding: 25px;
+}
+
+.promo-block {
+  width: 300px;
+  height: 123px;
+  margin-left: 15px;
+  padding: 25px;
+  position: relative;
+}
+
+.promo-block svg {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+}
+
 
 .promo h4 {
   font-size: 24px;
@@ -204,6 +249,7 @@ nav a:hover {
 
 .promo-materials {
   background-color: #ffbf47;
+  margin-left: 0;
 }
 
 .promo-tool {
@@ -216,16 +262,22 @@ nav a:hover {
 
 .promo-discounts {
   background-color: #8ed78f;
+  margin-top: 20px;
 }
 
 .promo-delivery {
   background-color: #ffc047;
+  margin-top: 20px;
 }
 
 .promo-tagline {
   font-size: 14px;
   text-transform: uppercase;
   color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.24);
+  padding: 12px 24px;
+  display: inline-block;
+  margin-top: 15px;
 }
 
 .promo-slider__tagline {
@@ -233,9 +285,43 @@ nav a:hover {
 }
 
 a.promo-slider__link {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
   background-color: #ee3643;
+  font-size: 14px;
   color: #ffffff;
   text-transform: uppercase;
+  padding: 14px 45px;
+  border-radius: 3px;
+  z-index: 2;
+}
+
+.slider-button__left {
+  position: absolute;
+  top: 110px;
+  left: 20px;
+  z-index: 2;
+  background: none;
+  border: none;
+}
+
+.slider-button__right {
+  position: absolute;
+  top: 110px;
+  right: 20px;
+  z-index: 2;
+  background: none;
+  border: none;
+}
+
+.promo-slider__dots {
+  list-style: none;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: 20px;
+  z-index: 2;
 }
 
 .section-header {
