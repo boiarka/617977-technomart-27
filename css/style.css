@@ -426,14 +426,66 @@ a.promo-slider__link {
   margin-left: 0;
 }
 
-
-
-
 .services {
+  margin-top: 80px;
   padding: 50px 130px;
+}
+
+.services h2 {
+  font-size: 30px;
+  font-family: 'Cuprum', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 38px;
 }
 
 .services-text {
   font-family: "PT Sans", sans-serif;
   font-size: 13px;
+  width: 398px;
+  margin-bottom: 70px;
+}
+
+.services-main {
+  display: flex;
+}
+
+.services-block {
+  width: 100%;
+  margin-left: 80px;
+  position: relative;
+}
+
+.services-block img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.services-block h3 {
+  font-size: 36px;
+  font-family: 'Cuprum', sans-serif;
+  text-transform: uppercase;
+  color: #32425c;
+}
+
+.services-block p {
+  width: 275px;
+}
+
+.services-main {
+  padding: 50px 0;
+}
+
+.services-main ul {
+  list-style: none;
+  width: 240px;
+}
+
+.services-main button {
+  width: 100%;
+  border: none;
+  padding: 25px;
+  font-size: 21px;
+  color: #ffffff;
+  background-color: #32425c;
 }
