@@ -20,6 +20,7 @@ a {
 
 h1 {
   font-size: 30px;
+  text-transform: uppercase;
 }
 
 h2 {
@@ -55,16 +56,62 @@ header ul {
   align-items: stretch;
 }
 
-.search {
-  margin-left: 15px;
+.search-form {
   flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
 }
+
+.search-form button {
+  background-color: transparent;
+  border: none;
+}
+
+.search-form svg {
+  position: absolute;
+  top: 14px;
+  left: 15px;
+  opacity: 0.5;
+}
+
+.search-form input {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  width: 100%;
+  padding-left: 45px;
+}
+
+.search-form input:hover {
+  background-color: #212a3a;
+}
+
+.search-form:focus svg {
+  background-color: red;
+}
+
+.search-form input:focus {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+
+
+.search-form input::placeholder {
+  color: #fff;
+}
+
 
 .logo {
   background-color: #ee3643;
   padding: 13px 55px;
   margin-bottom: -5px;
   box-shadow: inset 0px -5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.logo:hover {
+  background-color: #ca2c37;
 }
 
 .user-nav {
@@ -85,8 +132,18 @@ header ul {
   background-color: #212a3a;
 }
 
+
 .user-nav a:hover svg {
   opacity: 1;
+}
+
+.user-nav a:active {
+  background-color: #161d29;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.user-nav a:active svg {
+  opacity: 0.4;
 }
 
 .user-nav svg {
@@ -103,6 +160,10 @@ a.checkout:hover {
   background-color: #5fbb2d;
 }
 
+a.checkout:active {
+  background-color: #518534;
+  color: rgba(255, 255, 255, 0.5);
+}
 
 .header-main {
   display: flex;
@@ -190,6 +251,11 @@ nav a {
 
 nav a:hover {
   background-color: #293449;
+}
+
+nav a:active {
+  background-color: #1d2739;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .promo {
@@ -334,13 +400,26 @@ a.promo-slider__link {
   margin: 20px 0;
 }
 
-.section-header a {
+.section-header a,
+.site-button {
   background-color: #ee3643;
   color: #ffffff;
   text-transform: uppercase;
   display: inline-block;
   border-radius: 5px;
   padding: 14px 55px;
+  border: none;
+  cursor: pointer;
+}
+
+.site-button:hover,
+.section-header a:hover {
+  background-color: #ca2c37;
+}
+
+.site-button:active,
+.section-header a:active {
+  background-color: #ba2732;
 }
 
 .container {
@@ -428,7 +507,7 @@ a.promo-slider__link {
 
 .services {
   margin-top: 80px;
-  padding: 50px 130px;
+  padding: 50px 130px 0 130px;
 }
 
 .services h2 {
@@ -443,16 +522,25 @@ a.promo-slider__link {
   font-size: 13px;
   width: 398px;
   margin-bottom: 70px;
+  line-height: 1.85;
 }
 
 .services-main {
   display: flex;
+  justify-content: center;
+  align-items: stretch;
+
 }
 
 .services-block {
-  width: 100%;
+  flex-grow: 1;
   margin-left: 80px;
   position: relative;
+}
+
+.services-block__text p {
+  padding-top: 34px;
+  line-height: 1.85;
 }
 
 .services-block img {
@@ -473,13 +561,27 @@ a.promo-slider__link {
 }
 
 .services-main {
-  padding: 50px 0;
+  padding-bottom: 50px;
 }
 
 .services-main ul {
   list-style: none;
   width: 240px;
+  position: relative;
 }
+
+.services-main ul:after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 299px;
+  top: -30px;
+  right: 0;
+  background: url('../img/shadow.png') no-repeat;
+  background-size: contain;
+}
+
+
 
 .services-main button {
   width: 100%;
@@ -488,4 +590,211 @@ a.promo-slider__link {
   font-size: 21px;
   color: #ffffff;
   background-color: #32425c;
+  text-align: left;
+
+}
+
+.about {
+  padding: 85px 0;
+  display: flex;
+}
+
+.about .about-block:nth-child(1) {
+  padding-right: 100px;
+}
+
+.about .site-button {
+  margin-top: 35px;
+}
+
+.about p {
+  margin-top: 25px;
+  line-height: 1.85;
+}
+
+
+.about h3 {
+  font-size: 30px;
+}
+
+.about h1 {
+  margin: 0;
+}
+
+.company-list {
+  margin-top: 20px;
+  list-style: none;
+  font-size: 18px;
+}
+
+.company-list li {
+  margin-bottom: 20px;
+}
+
+.company-list li:last-child {
+  margin-bottom: 0;
+}
+
+.company-list li:before {
+  content: ' ';
+  display: inline-block;
+  width: 25px;
+  height: 2px;
+  margin-right: 10px;
+  margin-bottom: 4px;
+  background-color: red;
+}
+
+.map-small {
+  margin-top: 30px;
+  display: inline-block;
+}
+
+.map-small img {
+  width: 300px;
+  height: 160px;
+}
+
+footer {
+  background-color: #32425c;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer a:active {
+  text-decoration: none;
+}
+
+
+
+footer .logo {
+  padding: 23px 55px;
+}
+
+
+.footer-top,
+.footer-block,
+.footer-middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.footer-top {
+  padding-bottom: 35px;
+  align-items: flex-end;
+}
+
+.footer-top__nav {
+  list-style: none;
+  display: flex;
+  font-size: 18px;
+}
+
+.footer-top__nav li {
+  padding-right: 60px;
+}
+
+.footer-top__nav li:last-child {
+  padding-right: 0;
+}
+
+.footer-top__nav a {
+  color: #f1f5f7;
+}
+
+.footer-top__nav a:active {
+  color: rgba(241, 245, 247, 0.5);
+}
+
+.footer-block ul {
+  display: flex;
+}
+
+.footer-middle {
+  padding: 50px 0;
+  color: #f3f7f9;
+}
+
+.footer-middle p {
+  font-size: 18px;
+  line-height: 1.33;
+  text-align: left;
+}
+
+.footer-middle .footer-number {
+  display: block;
+}
+
+.footer-number a {
+  color: #f3f7f9;
+}
+
+.footer-middle__nav {
+  list-style: none;
+  display: flex;
+  font-size: 18px;
+}
+
+.footer-middle__nav li {
+  padding-right: 60px;
+}
+
+.footer-middle__nav li:last-child {
+  padding-right: 0;
+}
+
+.footer-middle__nav a {
+  color: #ffd180;
+}
+
+.footer-middle__nav a:active {
+  color: rgba(255, 209, 128, 0.5);
+}
+
+.footer-bottom {
+  background-color: #293449;
+  padding: 35px 0;
+  color: #fff;
+  font-size: 16px;
+}
+
+.copyright {
+  display: block;
+}
+
+.footer-bottom a {
+  display: block;
+  color: #ffd180;
+}
+
+.footer-bottom a:active {
+  color: #ee3643;
+}
+
+.footer-social {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-social li {
+  margin-right: 10px;
+}
+
+.footer-social a {
+  background-color: #212a3a;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.footer-social a:hover {
+  background-color: #ee3643;
 }
