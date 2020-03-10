@@ -335,12 +335,12 @@
 
         <div class="services-main">
           <ul class="services-menu">
-            <li><button class="services-menu__active">Доставка</button></li>
-            <li><button>Гарантия</button></li>
-            <li><button>Кредит</button></li>
+            <li><button id="delivery" class="services-menu__active">Доставка</button></li>
+            <li><button id="guarantee">Гарантия</button></li>
+            <li><button id="credit">Кредит</button></li>
           </ul>
 
-          <div class="services-block services-block__active">
+          <div id="delivery" class="services-block services-block__active">
             <div class="services-block__text">
               <h3 class="services-block__name">Доставка</h3>
               <p>
@@ -352,7 +352,7 @@
             <img src="img/services_car.png" alt="Доставка" />
           </div>
 
-          <div class="services-block">
+          <div id="guarantee" class="services-block">
             <div class="services-block__text">
               <h3 class="services-block__name">Гарантия</h3>
               <p>
@@ -365,7 +365,7 @@
             <img src="img/guarantee.png" alt="Гарантия" />
           </div>
 
-          <div class="services-block">
+          <div id="credit" class="services-block">
             <div class="services-block__text">
               <h3 class="services-block__name">Кредит</h3>
               <p>
@@ -414,7 +414,7 @@
     </section>
   </main>
 
-  <footer>
+  <footer class="footer">
     <div class="container">
 
       <div class="footer-top">
@@ -484,8 +484,6 @@
         </p>
       </div>
     </div>
-
-
   </footer>
 
   <div class="modal map-modal">
