@@ -214,7 +214,7 @@
     <section class="goods container">
       <div class="section-header goods-header">
         <h2 class="section-header__title">Популярные товары:</h2>
-        <a href="#">Все популярные товары</a>
+        <a class="section-header__link" href="#">Все популярные товары</a>
       </div>
 
       <div class="goods-block goods-block__main">
@@ -295,7 +295,7 @@
     <section class="brands container">
       <div class="section-header brands-header">
         <h2 class="section-header__title">Популярные производители:</h2>
-        <a href="#">все производители</a>
+        <a class="section-header__link" href="#">все производители</a>
       </div>
       <ul class="brands-list">
         <li>
@@ -392,41 +392,43 @@
       </button>
     </div>
 
-    <section class="about container">
-      <div class="about-block">
-        <h1 class="about-block__name">КОМПАНИЯ «Техномарт»</h1>
-        <p>
-          Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для
-          ремонта и строительства не оставит равнодушными любителей сэкономить
-          на гастарбайтерах.
-        </p>
+    <section class="container">
+      <div class="about">
+        <div class="about-block">
+          <h1 class="about-block__name">КОМПАНИЯ «Техномарт»</h1>
+          <p>
+            Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для
+            ремонта и строительства не оставит равнодушными любителей сэкономить
+            на гастарбайтерах.
+          </p>
 
-        <p>
-          Мы можем доставить ваш товар в самые отдаленные точки России!
-          Техномарт работает со многими транспортными компаниями:
-        </p>
-        <ul class="company-list">
-          <li>Деловые линии</li>
-          <li>Автотрейдинг</li>
-          <li>ЖелДорЭкспедиция</li>
-        </ul>
-        <a class="site-button" href="#">Подробнее о компании</a>
-      </div>
+          <p>
+            Мы можем доставить ваш товар в самые отдаленные точки России!
+            Техномарт работает со многими транспортными компаниями:
+          </p>
+          <ul class="company-list">
+            <li>Деловые линии</li>
+            <li>Автотрейдинг</li>
+            <li>ЖелДорЭкспедиция</li>
+          </ul>
+          <a class="site-button about-company__button" href="#">Подробнее о компании</a>
+        </div>
 
-      <div class="about-block about-block__contacts">
-        <h3 class="about-block__name">КОНТАКТЫ</h3>
-        <p>
-          Вы можете забрать товар сами,<br> заехав в наш офис:
-        </p>
-        <a class="map-small" href="#link_to_googleMap"><img src="img/map.jpg" alt="map" /></a>
-        <button class="site-button" type="button">Заблудились? НапиШИТЕ НАМ!</button>
+        <div class="about-block__contacts">
+          <h3 class="about-block__name">КОНТАКТЫ</h3>
+          <p>
+            Вы можете забрать товар сами,<br> заехав в наш офис:
+          </p>
+          <a class="map-small" href="#link_to_googleMap"><img src="img/map.jpg" alt="map" /></a>
+          <button class="site-button map-company__button" type="button">Заблудились? НапиШИТЕ НАМ!</button>
+        </div>
       </div>
     </section>
   </main>
 
   <!--Попап начало-->
 
-  <!-- <div>
+  <div class="visually-hidden">
     <form method="post" action="#">
       <label>
         Ваше имя:
@@ -450,7 +452,7 @@
           fill="#ee3643" />
       </svg>
     </button>
-		</div> -->
+  </div>
 
   <!--Попап конец-->
 
@@ -515,11 +517,11 @@
             </a>
           </li>
         </ul>
-        <p>
+        <p class="footer-block__email">
           Обратная связь:
           <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </p>
-        <p>Разработано —
+        <p class="footer-block__info">Разработано —
           <a href="https://htmlacademy.ru/">htmlacademy.ru</a>
         </p>
       </div>
