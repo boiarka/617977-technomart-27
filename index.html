@@ -107,7 +107,7 @@
     <section class="promo container">
       <div class="promo-materials promo-block">
         <h4 class="promo-block__name">Материалы</h4>
-        <div class="promo-tagline">на любой вкус</div>
+        <button class="promo-tagline">на любой вкус</button>
         <svg class="promo-block__icon materials-icon" xmlns="http://www.w3.org/2000/svg" width="44" height="65"
           viewBox="0 0 44 65">
           <g fill="#FFF">
@@ -121,7 +121,7 @@
 
       <div class="promo-tool promo-block">
         <h4 class="promo-block__name">Инструмент</h4>
-        <div class="promo-tagline">на все случаи</div>
+        <button class="promo-tagline">на все случаи</button>
         <svg class="promo-block__icon" xmlns="http://www.w3.org/2000/svg" width="75" height="61" viewBox="0 0 75 61">
           <g fill="#FFF">
             <path
@@ -132,7 +132,7 @@
 
       <div class="promo-equipment promo-block">
         <h4 class="promo-block__name">Техника</h4>
-        <div class="promo-tagline">для стройки</div>
+        <button class="promo-tagline">для стройки</button>
         <svg class="promo-block__icon" xmlns="http://www.w3.org/2000/svg" width="78" height="62" viewBox="0 0 78 62">
           <g fill="#FFF">
             <path
@@ -181,7 +181,7 @@
       <div class="slider-left">
         <div class="promo-discounts promo-block">
           <h4 class="promo-block__name">Скидки 50%</h4>
-          <div class="promo-tagline">На 350 товаров</div>
+          <button class="promo-tagline">На 350 товаров</button>
           <svg class="promo-block__icon" xmlns="http://www.w3.org/2000/svg" width="59" height="72" viewBox="0 0 59 72">
             <g fill="#FFF">
               <path
@@ -196,7 +196,7 @@
 
         <div class="promo-delivery promo-block">
           <h4 class="promo-block__name">Доставка</h4>
-          <div class="promo-tagline">бесплатно</div>
+          <button class="promo-tagline">бесплатно</button>
           <svg class="promo-block__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             width="78" height="63" viewBox="0 0 78 63">
             <g fill="#FFF">
@@ -380,18 +380,6 @@
       </div>
     </section>
 
-    <div class="visually-hidden container">
-      <img src="img/map-big.jpg" alt="" />
-      <button type="button">
-        <svg enable-background="new 0 0 21 21" height="21" viewBox="0 0 21 21" width="21"
-          xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414 0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422 7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422 7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z"
-            fill="#ee3643" />
-        </svg>
-      </button>
-    </div>
-
     <section class="container">
       <div class="about">
         <div class="about-block">
@@ -425,36 +413,6 @@
       </div>
     </section>
   </main>
-
-  <!--Попап начало-->
-
-  <div class="visually-hidden">
-    <form method="post" action="#">
-      <label>
-        Ваше имя:
-        <input type="text" name="name" value="Имя Фамилия" />
-      </label>
-      <label>
-        Ваш e-mail:
-        <input type="text" name="email" value="email@example.com" />
-      </label>
-      <label>
-        Текст письма:
-        <textarea name="comment" placeholder="В свободной форме" required form="text"></textarea>
-      </label>
-      <button>Отправить</button>
-    </form>
-    <button type="button">
-      <svg enable-background="new 0 0 21 21" height="21" viewBox="0 0 21 21" width="21"
-        xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414 0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422 7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422 7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z"
-          fill="#ee3643" />
-      </svg>
-    </button>
-  </div>
-
-  <!--Попап конец-->
 
   <footer>
     <div class="container">
@@ -529,6 +487,54 @@
 
 
   </footer>
+
+  <div class="modal map-modal">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1583869361921!5m2!1sru!2sua"
+      width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    <button class="close-modal" type="button">
+      <svg enable-background="new 0 0 21 21" height="21" viewBox="0 0 21 21" width="21"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414 0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422 7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422 7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z"
+          fill="#ee3643" />
+      </svg>
+    </button>
+  </div>
+
+  <div class="modal write-us">
+    <form method="post" action="#">
+      <div class="write-us__input">
+        <label>
+          <p class="input-name">Ваше имя:</p>
+          <input type="text" name="name" placeholder="Имя Фамилия" />
+        </label>
+        <label>
+          <p class="input-name">Ваш e-mail:</p>
+          <input type="email" name="email" placeholder="email@example.com" />
+        </label>
+      </div>
+
+      <label class="write-us__textarea">
+        <p class="textarea-name">Текст письма:</p>
+        <textarea name="comment" placeholder="В свободной форме"></textarea>
+      </label>
+      <div class="write-us__button">
+        <button type="submit" class="site-button">Отправить</button>
+      </div>
+    </form>
+    <button class="close-modal" type="button">
+      <svg enable-background="new 0 0 21 21" height="21" viewBox="0 0 21 21" width="21"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414 0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422 7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422 7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z"
+          fill="#ee3643" />
+      </svg>
+    </button>
+  </div>
+
+  <script src="js/main.js"></script>
+
 </body>
 
 </html>
