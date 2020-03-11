@@ -108,7 +108,7 @@ window.addEventListener("keydown", function (evt) {
   }
 });
 
-// Слайдер
+// Слайдер "Сервисы"
 const allServicesButtons = document.querySelectorAll('.services-menu button');
 const allServicesBlocks = document.querySelectorAll('.services-main .services-block');
 
@@ -141,4 +141,46 @@ if (allServicesButtons && allServicesBlocks) {
   });
 }
 
-console.log(allServicesBlocks);
+// Слайдер "Промо"
+const promoSlider = document.querySelector('.promo-slider');
+if (promoSlider) {
+  const allPromoSliderSlides = promoSlider.querySelectorAll('.promo-slider__slide');
+  const promoSliderButtonLeft = promoSlider.querySelector('.slider-button__left');
+  const promoSliderButtonRight = promoSlider.querySelector('.slider-button__right');
+  let currentSlide;
+  let maxSlides = allPromoSliderSlides.length - 1;
+
+  const checkActiveSlide = function () {
+    for (let i = 0; i < allPromoSliderSlides.length; i++) {
+      if (allPromoSliderSlides[i].classList.contains('promo-slider__active')) {
+        currentSlide = i;
+      }
+    }
+  }
+
+
+
+  promoSliderButtonLeft.addEventListener("click", function (evt) {
+    checkActiveSlide();
+    allPromoSliderSlides[currentSlide].classList.remove('promo-slider__active');
+    if (currentSlide === 0) {
+      currentSlide = maxSlides;
+    } else {
+      currentSlide = currentSlide - 1;
+    }
+    if (currentSlide < 0) {
+      currentSlide = allPromoSliderSlides.length - 1;
+    }
+    allPromoSliderSlides[currentSlide].classList.add('promo-slider__active');
+  });
+
+  promoSliderButtonRight.addEventListener("click", function (evt) {
+    checkActiveSlide();
+    allPromoSliderSlides[currentSlide].classList.remove('promo-slider__active');
+    currentSlide = currentSlide + 1;
+    if (currentSlide > (allPromoSliderSlides.length - 1)) {
+      currentSlide = 0;
+    }
+    allPromoSliderSlides[currentSlide].classList.add('promo-slider__active');
+  });
+}

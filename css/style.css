@@ -827,6 +827,7 @@ a.promo-slider__link:active {
 }
 
 .services {
+  height: 522px;
   margin-top: 66px;
   padding: 62px 0 0 0;
 }
@@ -871,7 +872,7 @@ a.promo-slider__link:active {
 
 .services-block img {
   position: absolute;
-  top: 28px;
+  top: 0;
   right: 0;
 }
 
