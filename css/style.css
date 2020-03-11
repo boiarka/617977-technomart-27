@@ -282,6 +282,16 @@ a.user-cabinet {
   position: relative;
 }
 
+a.user-orders:hover,
+a.user-cabinet:hover {
+  color: #ee3643;
+}
+
+a.user-orders:active,
+a.user-cabinet:active {
+  color: #CFD4D9;
+}
+
 a.user-cabinet::before {
   content: '';
   position: absolute;
@@ -322,6 +332,27 @@ a.user-logged__link {
   margin-left: 10px;
   padding: 0;
 }
+
+
+
+a.user-logged__link .user-icon,
+a.user-logged__link .logout-icon {
+  fill: #C5C5C5;
+}
+
+a.user-logged__link:hover .user-icon,
+a.user-logged__link:hover .logout-icon {
+  fill: #32425A;
+}
+
+a.user-logged__link:active .user-icon,
+a.user-logged__link:active .logout-icon,
+a.user-logged__link:active {
+  color: #C5C5C5;
+  fill: #C5C5C5;
+}
+
+
 
 .logged-link {
   list-style: none;
@@ -693,6 +724,10 @@ a.promo-slider__link:active {
   font-size: 17px;
   color: #a9a9a9;
   margin-top: 4px;
+}
+
+.goods-card:hover {
+  box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
 .goods-card:hover .goods-buttons {
@@ -1214,6 +1249,11 @@ button.services-menu__active {
   border-bottom: 1px dotted #ee3643;
 }
 
+.sorting-type__one a:hover {
+  color: #000000;
+  border-bottom: 1px solid #ee3643;
+}
+
 .sorting-active a {
   color: #ee3643;
   border-bottom: none;
@@ -1235,6 +1275,11 @@ button.services-menu__active {
 
 .arrow-bottom {
   fill: #c5c5c5;
+}
+
+.arrow-top:hover,
+.arrow-bottom:hover {
+  fill: #000000;
 }
 
 .breadcrumbs {
@@ -1265,6 +1310,8 @@ button.services-menu__active {
 .filter fieldset {
   border: none;
   border-top: 1px solid #EBEBEB;
+  margin: 0;
+  padding: 0;
   margin-top: 25px;
   padding-top: 25px;
 }
@@ -1301,6 +1348,15 @@ button.services-menu__active {
   color: #000000;
 }
 
+.pagination a:hover {
+  border-color: #bdc6ca;
+}
+
+.pagination a:active {
+  border-color: #ee3643;
+}
+
+
 .pagination-next a {
   padding: 10px 30px;
 }
@@ -1309,6 +1365,10 @@ button.services-menu__active {
   background-color: #ee3643;
   color: #ffffff;
   border: 1px solid #ee3643;
+}
+
+.pagination-active a:hover {
+  border-color: #ee3643;
 }
 
 .catalog-about {
@@ -1660,4 +1720,93 @@ button.services-menu__active {
 .shopping-button {
   background-color: #fff;
   color: #000000;
+}
+
+.range-controls {
+  position: relative;
+  width: 220px;
+  height: 80px;
+  padding-top: 39px;
+  margin-bottom: 15px;
+  background-color: #f7f3ec;
+  border-radius: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+  width: 85%;
+  height: 2px;
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+
+  width: 4px;
+  height: 4px;
+  padding: 0;
+
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 18px;
+}
+
+.range-controls .toggle-max {
+  left: 160px;
+}
+
+.price-controls {
+  display: flex;
+}
+
+.price-controls label {
+  width: 95px;
+  height: 38px;
+}
+
+
+.price-controls input {
+  width: 95px;
+  height: 38px;
+  padding-left: 13px;
+  background-color: #f7f3ec;
+  border: none;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 17px;
+  font-family: "PT Sans", sans-serif;
+}
+
+.price-controls input:first-child {
+  margin-left: 0;
+}
+
+.max-price__block {
+  margin-left: auto;
+  position: relative;
+}
+
+.max-price__block:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: -20px;
+  width: 10px;
+  height: 1px;
+  background-color: #444444;
 }
