@@ -48,8 +48,8 @@
               Корзина: 0
             </a>
           </li>
-          <li>
-            <a href="#" class="checkout">
+          <li class="checkout">
+            <a href="#">
               Оформить заказ
             </a>
           </li>
@@ -87,9 +87,9 @@
       </div>
 
 
-      <nav>
+      <nav class="navigation">
         <ul>
-          <li><a>Главная</a></li>
+          <li class="navigation-active"><a>Главная</a></li>
           <li><a href="#">Компания</a></li>
           <li><a href="catalog.html">Каталог</a></li>
           <li><a href="#">Новости</a></li>
@@ -103,9 +103,10 @@
 
   </header>
 
-  <main>
+  <main class="main-container">
     <section class="promo container">
       <div class="promo-materials promo-block">
+        <div class="flag flag-new">новинка</div>
         <h4 class="promo-block__name">Материалы</h4>
         <button class="promo-tagline">на любой вкус</button>
         <svg class="promo-block__icon materials-icon" xmlns="http://www.w3.org/2000/svg" width="44" height="65"
@@ -182,7 +183,8 @@
         <div class="promo-discounts promo-block">
           <h4 class="promo-block__name">Скидки 50%</h4>
           <button class="promo-tagline">На 350 товаров</button>
-          <svg class="promo-block__icon" xmlns="http://www.w3.org/2000/svg" width="59" height="72" viewBox="0 0 59 72">
+          <svg class="promo-block__icon discount-icon" xmlns="http://www.w3.org/2000/svg" width="59" height="72"
+            viewBox="0 0 59 72">
             <g fill="#FFF">
               <path
                 d="M58.34 20.545a2.997 2.997 0 0 0-2.396-1.195h-38.67l-2.475-7.385H3.058a3 3 0 1 0 0 6h7.424l13.5 40.285h25.159a3 3 0 1 0 0-6H28.299l-1.726-5.149h23.12a3.001 3.001 0 0 0 2.884-2.172l6.25-21.75a3.005 3.005 0 0 0-.487-2.634zm-7.781 9.681h-4.81V25.35h6.211l-1.401 4.876zm-17.617 0V25.35h6.807v4.875h-6.807zm6.807 6v4.875h-6.807v-4.875h6.807zM26.942 25.35v4.875h-6.023l-1.634-4.875h7.657zm-4.013 10.876h4.013v4.875h-2.379l-1.634-4.875zm22.82 4.875v-4.875h3.086l-1.401 4.875h-1.685z" />
@@ -233,7 +235,7 @@
           <img src="img/Perforator_1.jpg" alt="item" />
           <h3 class="goods-card__title">Перфоратор BOSCH BFG 9000</h3>
           <div class="goods-oldprice">22500 Р.</div>
-          <div class="goods-price">15500 Р.</div>
+          <div class="goods-price">25500 Р.</div>
         </article>
 
         <article class="goods-card">
@@ -273,6 +275,7 @@
         </article>
 
         <article class="goods-card">
+          <div class="flag flag-new">новинка</div>
           <div class="goods-buttons">
             <button class="buy-button" type="button">
               <svg class="buy-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
@@ -308,7 +311,7 @@
           <a href="#"><img src="img/company-dewalt.png" alt="map" /></a>
         </li>
         <li>
-          <a href="#"><img src="img/company-intercol.png" alt="map" /></a>
+          <a href="#"><img class="intercol-brand" src="img/company-intercol.png" alt="map" /></a>
         </li>
         <li>
           <a href="#"><img src="img/company-hitachi.png" alt="map" /></a>
@@ -320,7 +323,7 @@
           <a href="#"><img src="img/company-aeg.png" alt="map" /></a>
         </li>
         <li>
-          <a href="#"><img src="img/company-metabo.png" alt="map" /></a>
+          <a href="#"><img class="metabo-brand" src="img/company-metabo.png" alt="map" /></a>
         </li>
       </ul>
     </section>
@@ -343,9 +346,9 @@
           <div id="delivery" class="services-block services-block__active">
             <div class="services-block__text">
               <h3 class="services-block__name">Доставка</h3>
-              <p>
+              <p class="services-block__about">
                 Мы с удовольствием доставим ваш товар прямо <br> к вашему подъезду
-                совершенно бесплатно! Ведь мы неплохо заработаем, <br> поднимая его на
+                совершенно бесплатно! Ведь&nbsp;мы неплохо заработаем, <br> поднимая его на
                 ваш этаж!
               </p>
             </div>
@@ -384,15 +387,15 @@
       <div class="about">
         <div class="about-block">
           <h1 class="about-block__name">КОМПАНИЯ «Техномарт»</h1>
-          <p>
+          <p class="about-block__text">
             Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для
             ремонта и строительства не оставит равнодушными любителей сэкономить
             на гастарбайтерах.
           </p>
-
-          <p>
-            Мы можем доставить ваш товар в самые отдаленные точки России!
-            Техномарт работает со многими транспортными компаниями:
+          <p class="about-block__text">
+            Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт&nbsp;работает&nbsp;со&nbsp;многими
+            транспортными
+            компаниями:
           </p>
           <ul class="company-list">
             <li>Деловые линии</li>
@@ -404,10 +407,11 @@
 
         <div class="about-block__contacts">
           <h3 class="about-block__name">КОНТАКТЫ</h3>
-          <p>
-            Вы можете забрать товар сами,<br> заехав в наш офис:
+          <p class="about-block__text contacts-block__small">
+            Вы можете забрать товар сами, заехав&nbsp;в&nbsp;наш&nbsp;офис:
           </p>
-          <a class="map-small" href="#link_to_googleMap"><img src="img/map.jpg" alt="map" /></a>
+          <a class="map-small" href="#link_to_googleMap"><img width="300px" height="160px" src="img/map.jpg"
+              alt="Карта маленького размера" /></a>
           <button class="site-button map-company__button" type="button">Заблудились? НапиШИТЕ НАМ!</button>
         </div>
       </div>
@@ -421,8 +425,8 @@
         <a class="logo"><img src="img/logo-technomart.svg" alt="logo" /></a>
         <ul class="footer-top__nav">
           <li><a href="#">Компания</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
           <li><a href="#">Новости</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
           <li><a href="#">Доставка</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>

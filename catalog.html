@@ -4,8 +4,12 @@
 <head>
   <meta charset="utf-8" />
   <title>HTML Academy: Техномарт</title>
-  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,700|PT+Sans:400,700&display=swap&subset=cyrillic"
-    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i&display=swap&subset=cyrillic,cyrillic-ext"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap&subset=cyrillic,cyrillic-ext"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -34,8 +38,8 @@
               Закладки: 0
             </a>
           </li>
-          <li>
-            <a href="#" class="user-cart">
+          <li class="user-cart">
+            <a href="#">
               <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
                 <circle fill="#ffffff" cx="4.5" cy="13.5" r="1.5" />
                 <circle fill="#ffffff" cx="12.5" cy="13.5" r="1.5" />
@@ -44,8 +48,8 @@
               Корзина: 10
             </a>
           </li>
-          <li>
-            <a href="#" class="checkout">
+          <li class="checkout">
+            <a href="#">
               Оформить заказ
             </a>
           </li>
@@ -83,16 +87,16 @@
               </g>
             </svg>
           </a>
-          <a class="user-orders" href="#">Мои заказы</a>
-          <a class="user-cabinet" href="#">Личный кабинет</a>
+          <span class="user-orders"><a class="user-orders__link" href="#">Мои заказы</a></span>
+          <span class="user-cabinet"><a class="user-cabinet__link" href="#">Личный кабинет</a></span>
         </p>
       </div>
 
-      <nav>
+      <nav class="navigation">
         <ul>
-          <li><a>Главная</a></li>
+          <li><a href="index.html">Главная</a></li>
           <li><a href="#">Компания</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
+          <li class="navigation-active"><a>Каталог</a></li>
           <li><a href="#">Новости</a></li>
           <li><a href="#">Спецпредложения</a></li>
           <li><a href="#">Доставка</a></li>
@@ -117,24 +121,11 @@
           </svg>
         </a>
       </li>
-      <li><svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12">
-          <path fill="#C1C6CE"
-            d="M7.237 5.642L1.729.133a.506.506 0 1 0-.716.716L6.163 6l-5.151 5.15a.507.507 0 0 0 .716.717l5.509-5.509a.504.504 0 0 0 0-.716z" />
-        </svg></li>
+      <li class="breadcrumbs-arrow"></li>
       <li><a href="#">Каталог</a></li>
-      <li>
-        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12">
-          <path fill="#C1C6CE"
-            d="M7.237 5.642L1.729.133a.506.506 0 1 0-.716.716L6.163 6l-5.151 5.15a.507.507 0 0 0 .716.717l5.509-5.509a.504.504 0 0 0 0-.716z" />
-        </svg>
-      </li>
+      <li class="breadcrumbs-arrow"></li>
       <li><a href="#">Инструмент</a></li>
-      <li>
-        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12">
-          <path fill="#C1C6CE"
-            d="M7.237 5.642L1.729.133a.506.506 0 1 0-.716.716L6.163 6l-5.151 5.15a.507.507 0 0 0 .716.717l5.509-5.509a.504.504 0 0 0 0-.716z" />
-        </svg>
-      </li>
+      <li class="breadcrumbs-arrow"></li>
       <li><a href="#">Перфораторы</a></li>
     </ul>
 
@@ -148,7 +139,7 @@
       <aside class="sitebar">
         <div class="sitebar-block__name">ФИЛЬТР:</div>
         <form class="filter" method="post" action="#">
-          <fieldset>
+          <fieldset class="filter-price">
             <p class="filter-legend">Цена:</p>
 
             <div class="range-filter">
@@ -200,7 +191,7 @@
             </ul>
           </fieldset>
 
-          <fieldset>
+          <fieldset class="filter-power">
             <p class="filter-legend">Питание:</p>
 
             <ul>
@@ -232,14 +223,16 @@
           <ul class="sorting-type__second">
             <li>
               <a href="#">
-                <svg class="arrow-top" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                <svg class="active-arrow sorting-arrow" xmlns="http://www.w3.org/2000/svg" width="11" height="10"
+                  viewBox="0 0 11 10">
                   <path d="M5.5 0L0 10h11z" />
                 </svg>
               </a>
             </li>
             <li>
               <a href="#">
-                <svg class="arrow-bottom" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                <svg class="sorting-arrow" xmlns="http://www.w3.org/2000/svg" width="11" height="10"
+                  viewBox="0 0 11 10">
                   <path d="M5.5 10L0 0h11" />
                 </svg>
               </a>
@@ -433,8 +426,8 @@
       <h2 class="catalog-about__h2">ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
       <p class="catalog-about__text">
         Перфоратор — универсальный строительный инструмент. Предназначен для
-        сверления и долбления отверстий в кирпиче, бетоне и камне. Существуют
-        электромеханические и пневматические перфораторы. Современные модели
+        сверления и долбления отверстий в кирпиче, бетоне и камне.
+        Существуют&nbsp;электромеханические&nbsp;и пневматические перфораторы. Современные модели
         могут выполнять функции дрели, шуруповерта и отбойного молотка. В
         ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве
         будут совмещены отбойный молоток и ударная дрель.
