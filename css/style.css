@@ -410,10 +410,12 @@ a {
 .navigation ul {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 25px;
 }
 
 .navigation li {
-  min-width: 134px;
+  padding: 0 28px;
 }
 
 
