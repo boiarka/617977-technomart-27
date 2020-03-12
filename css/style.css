@@ -189,7 +189,13 @@ a {
 }
 
 .user-cart a {
+  width: 150px;
   background-color: #ee3643;
+  padding: 0px 0px 0 18px;
+}
+
+.bookmark a {
+  padding: 0px 27px 0 12px;
 }
 
 .checkout a {
@@ -211,6 +217,13 @@ a {
   justify-content: space-between;
   align-items: flex-start;
   padding: 46px 0;
+}
+
+.catalog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 46px 0 43px 0;
 }
 
 .header-text {
@@ -247,11 +260,17 @@ a {
 }
 
 .phone-icon {
-  margin-left: 10px;
+  margin-left: 11px;
 }
 
 .header-adress {
   padding-top: 7px;
+  font-size: 14px;
+  color: #32425c;
+}
+
+.header-adress__catalog {
+  padding-top: 8px;
   font-size: 14px;
   color: #32425c;
 }
@@ -268,13 +287,18 @@ a {
   display: block;
 }
 
+.user-cabinet,
+.user-orders {
+  display: inline-block;
+}
+
 .user-orders .user-orders__link {
   display: inline-block;
   vertical-align: top;
   font-size: 16px;
   color: #32425c;
   text-decoration: underline;
-  margin-top: 5px;
+  margin-top: 7px;
   margin-left: 12px;
   padding: 0;
   position: relative;
@@ -286,7 +310,7 @@ a {
   font-size: 16px;
   color: #32425c;
   text-decoration: underline;
-  margin-top: 5px;
+  margin-top: 7px;
   margin-left: 29px;
   padding: 0;
   position: relative;
@@ -1253,8 +1277,8 @@ button.services-menu__active {
 
 .sitebar-block__name {
   background-color: #f7f3ec;
-  padding: 7px 19px 11px 19px;
-  margin-bottom: 16px;
+  padding: 8px 19px 11px 19px;
+  margin-bottom: 15px;
   font-family: "PT Sans", sans-serif;
   font-size: 13px;
   line-height: 1.38;
@@ -1270,7 +1294,7 @@ button.services-menu__active {
 }
 
 .sorting {
-  padding: 7px 19px 11px 19px;
+  padding: 7px 19px 9px 19px;
   display: flex;
   background-color: #f7f3ec;
   font-family: "PT Sans", sans-serif;
@@ -1286,7 +1310,8 @@ button.services-menu__active {
 
 .sorting-type__one li {
   text-transform: uppercase;
-  margin-right: 65px;
+  padding-left: 3px;
+  margin-right: 64px;
 }
 
 .sorting-type__one li:last-child {
@@ -1303,6 +1328,10 @@ button.services-menu__active {
   border-bottom: 1px solid #ee3643;
 }
 
+.sorting-active a {
+  margin-right: 1px;
+}
+
 .sorting-active a,
 .sorting-active a:hover,
 .sorting-active a:active {
@@ -1315,10 +1344,11 @@ button.services-menu__active {
   display: flex;
   margin-left: auto;
   list-style: none;
+  padding-top: 2px;
 }
 
 .sorting-type__second li:first-child {
-  margin-right: 10px;
+  margin-right: 19px;
 }
 
 .sorting-arrow {
@@ -1339,6 +1369,7 @@ button.services-menu__active {
   display: flex;
   list-style: none;
   margin-top: 21px;
+  padding-top: 1px;
   font-family: "PT Sans", sans-serif;
 }
 
@@ -1415,15 +1446,18 @@ button.services-menu__active {
 .pagination {
   list-style: none;
   display: flex;
+  font-family: "PT Sans", sans-serif;
+  font-size: 13px;
 }
 
 .pagination li {
-  margin-right: 10px;
+  margin-right: 9px;
 }
 
 .pagination a {
   display: inline-block;
-  padding: 10px 15px;
+  min-width: 38px;
+  padding: 11px 15px;
   border: 1px solid #e5e5e5;
   border-radius: 3px;
   color: #000000;
@@ -1439,7 +1473,7 @@ button.services-menu__active {
 
 
 .pagination-next a {
-  padding: 10px 36px;
+  padding: 11px 31px;
 }
 
 .pagination-active a {
@@ -1453,13 +1487,15 @@ button.services-menu__active {
 }
 
 .catalog-about {
-  margin-top: 60px;
+  margin-top: 59px;
   padding: 62px 0 69px 0;
   background-color: #f4f7f9;
 }
 
 .catalog-about__h2 {
   font-size: 30px;
+  font-weight: normal;
+  letter-spacing: 0.155px;
 }
 
 .catalog-about__text {
@@ -1468,6 +1504,7 @@ button.services-menu__active {
   font-family: "PT Sans", sans-serif;
   font-weight: normal;
   line-height: 1.85;
+  letter-spacing: 0.155px;
 }
 
 .visually-hidden {
@@ -1765,6 +1802,7 @@ button.services-menu__active {
   background-color: #fff;
   cursor: pointer;
   margin-top: 60px;
+  font-family: "PT Sans", sans-serif;
 }
 
 .card-add {
@@ -1901,4 +1939,8 @@ button.services-menu__active {
 
 .intercol-brand {
   padding-bottom: 12px;
+}
+
+.home-icon {
+  margin-left: -2px;
 }
