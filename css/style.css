@@ -1304,18 +1304,22 @@ button.services-menu__active {
 
 .sorting-type__one {
   display: flex;
-  margin-left: 139px;
+  margin-left: 142px;
   list-style: none;
 }
 
 .sorting-type__one li {
   text-transform: uppercase;
   padding-left: 3px;
-  margin-right: 64px;
+  margin-right: 71px;
 }
 
 .sorting-type__one li:last-child {
   margin-right: 0;
+}
+
+.sorting-type__one a:last-child {
+  margin-left: -6px;
 }
 
 .sorting-type__one a {
