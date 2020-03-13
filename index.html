@@ -343,7 +343,7 @@
             <li><button id="credit">Кредит</button></li>
           </ul>
 
-          <div id="delivery" class="services-block services-block__active">
+          <div data-id="delivery" class="services-block services-block__active">
             <div class="services-block__text">
               <h3 class="services-block__name">Доставка</h3>
               <p class="services-block__about">
@@ -355,7 +355,7 @@
             <img src="img/services_car.png" alt="Доставка" />
           </div>
 
-          <div id="guarantee" class="services-block">
+          <div data-id="guarantee" class="services-block">
             <div class="services-block__text">
               <h3 class="services-block__name">Гарантия</h3>
               <p class="services-block__about">
@@ -368,7 +368,7 @@
             <img src="img/guarantee.png" alt="Гарантия" />
           </div>
 
-          <div id="credit" class="services-block">
+          <div data-id="credit" class="services-block">
             <div class="services-block__text">
               <h3 class="services-block__name">Кредит</h3>
               <p class="services-block__about">
@@ -410,7 +410,7 @@
           <p class="about-block__text contacts-block__small">
             Вы можете забрать товар сами, заехав&nbsp;в&nbsp;наш&nbsp;офис:
           </p>
-          <a class="map-small" href="#link_to_googleMap"><img width="300px" height="160px" src="img/map.jpg"
+          <a class="map-small" href="#link_to_googleMap"><img width="300" height="160" src="img/map.jpg"
               alt="Карта маленького размера" /></a>
           <button class="site-button map-company__button" type="button">Заблудились? НапиШИТЕ НАМ!</button>
         </div>
@@ -493,7 +493,7 @@
   <div class="modal map-modal">
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1583869361921!5m2!1sru!2sua"
-      width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+      width="600" height="450" style="border:0;" allowfullscreen=""></iframe>
     <button class="close-modal" type="button">
       <svg enable-background="new 0 0 21 21" height="21" viewBox="0 0 21 21" width="21"
         xmlns="http://www.w3.org/2000/svg">
@@ -508,17 +508,17 @@
     <form method="post" action="#">
       <div class="write-us__input">
         <label>
-          <p class="input-name">Ваше имя:</p>
+          <span class="input-name">Ваше имя:</span>
           <input type="text" name="name" placeholder="Имя Фамилия" />
         </label>
         <label>
-          <p class="input-name">Ваш e-mail:</p>
+          <span class="input-name">Ваш e-mail:</span>
           <input type="email" name="email" placeholder="email@example.com" />
         </label>
       </div>
 
       <label class="write-us__textarea">
-        <p class="textarea-name">Текст письма:</p>
+        <span class="textarea-name">Текст письма:</span>
         <textarea name="comment" placeholder="В свободной форме"></textarea>
       </label>
       <div class="write-us__button">

@@ -123,7 +123,7 @@ if (allServicesButtons && allServicesBlocks) {
 
   const changeServicesBlocksClass = function (id) {
     allServicesBlocks.forEach((item) => {
-      if (item.id === id) {
+      if (item.dataset.id === id) {
         item.classList.add('services-block__active');
       } else {
         item.classList.remove('services-block__active');
