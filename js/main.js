@@ -1,1 +1,186 @@
-const buttonWriteUs=document.querySelector(".map-company__button"),modalWriteUs=document.querySelector(".write-us");if(modalWriteUs){const a=modalWriteUs.querySelector(".close-modal"),b=modalWriteUs.querySelector("form"),c=modalWriteUs.querySelector("[name=name]"),d=modalWriteUs.querySelector("[name=email]"),e=modalWriteUs.querySelector("[name=comment]");buttonWriteUs.addEventListener("click",function(a){a.preventDefault(),modalWriteUs.classList.add("modal-show"),console.log(storage),storage?(c.value=storage,d.focus()):c.focus()}),a.addEventListener("click",function(a){a.preventDefault(),modalWriteUs.classList.remove("modal-show"),modalWriteUs.classList.remove("modal-error")}),b.addEventListener("submit",function(a){c.value&&d.value&&e.value?isStorageSupport&&localStorage.setItem("login",c.value):(a.preventDefault(),modalWriteUs.classList.remove("modal-error"),modalWriteUs.offsetWidth=modalWriteUs.offsetWidth,modalWriteUs.classList.add("modal-error"))})}const buttonSmallMap=document.querySelector(".map-small"),modalMap=document.querySelector(".map-modal");if(modalMap){const a=modalMap.querySelector(".close-modal");buttonSmallMap.addEventListener("click",function(a){a.preventDefault(),modalMap.classList.add("modal-show")}),a.addEventListener("click",function(a){a.preventDefault(),modalMap.classList.remove("modal-show")})}const allBuyButtons=document.querySelectorAll(".buy-button"),modalCardAdd=document.querySelector(".card-add");if(modalCardAdd){const a=document.querySelector(".close-modal");allBuyButtons.forEach(a=>{a.addEventListener("click",function(a){a.preventDefault(),modalCardAdd.classList.add("modal-show")})}),a.addEventListener("click",function(a){a.preventDefault(),modalCardAdd.classList.remove("modal-show")})}let isStorageSupport=!0,storage="";try{storage=localStorage.getItem("login")}catch(a){isStorageSupport=!1}window.addEventListener("keydown",function(a){27===a.keyCode&&(a.preventDefault(),modalWriteUs&&modalWriteUs.classList.contains("modal-show")&&(modalWriteUs.classList.remove("modal-show"),modalWriteUs.classList.remove("modal-error")),modalMap&&modalMap.classList.contains("modal-show")&&modalMap.classList.remove("modal-show"),modalCardAdd&&modalCardAdd.classList.contains("modal-show")&&modalCardAdd.classList.remove("modal-show"))});const allServicesButtons=document.querySelectorAll(".services-menu button"),allServicesBlocks=document.querySelectorAll(".services-main .services-block");if(allServicesButtons&&allServicesBlocks){const a=function(){allServicesButtons.forEach(a=>{a.classList.remove("services-menu__active")})},b=function(a){allServicesBlocks.forEach(b=>{b.dataset.id===a?b.classList.add("services-block__active"):b.classList.remove("services-block__active")})};allServicesButtons.forEach(c=>{c.addEventListener("click",function(d){d.preventDefault(),a(),b(c.id),c.classList.add("services-menu__active")})})}const promoSlider=document.querySelector(".promo-slider");if(promoSlider){const a=promoSlider.querySelectorAll(".promo-slider__slide"),b=promoSlider.querySelector(".slider-button__left"),c=promoSlider.querySelector(".slider-button__right");let d,e=a.length-1;const f=function(){for(let b=0;b<a.length;b++)a[b].classList.contains("promo-slider__active")&&(d=b)};b.addEventListener("click",function(){f(),a[d].classList.remove("promo-slider__active"),0===d?d=e:--d,0>d&&(d=a.length-1),a[d].classList.add("promo-slider__active")}),c.addEventListener("click",function(){f(),a[d].classList.remove("promo-slider__active"),++d,d>a.length-1&&(d=0),a[d].classList.add("promo-slider__active")})}
+// Окно "Напишите нам"
+const buttonWriteUs = document.querySelector(".map-company__button");
+const modalWriteUs = document.querySelector(".write-us");
+
+if (modalWriteUs) {
+  const modalWriteUsClose = modalWriteUs.querySelector(".close-modal");
+  const form = modalWriteUs.querySelector("form");
+  const login = modalWriteUs.querySelector("[name=name]");
+  const email = modalWriteUs.querySelector("[name=email]");
+  const comment = modalWriteUs.querySelector("[name=comment]");
+
+  buttonWriteUs.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    modalWriteUs.classList.add("modal-show");
+    console.log(storage);
+
+    if (storage) {
+      login.value = storage;
+      email.focus();
+    } else {
+      login.focus();
+    }
+  });
+
+  modalWriteUsClose.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    modalWriteUs.classList.remove("modal-show");
+    modalWriteUs.classList.remove("modal-error");
+  });
+
+  form.addEventListener("submit", function (evt) {
+    if (!login.value || !email.value || !comment.value) {
+      evt.preventDefault();
+      modalWriteUs.classList.remove("modal-error");
+      modalWriteUs.offsetWidth = modalWriteUs.offsetWidth;
+      modalWriteUs.classList.add("modal-error");
+    } else {
+      if (isStorageSupport) {
+        localStorage.setItem("login", login.value);
+      }
+    }
+  });
+}
+
+// Окно "Карта"
+const buttonSmallMap = document.querySelector(".map-small");
+const modalMap = document.querySelector(".map-modal");
+
+if (modalMap) {
+  const modalMapClose = modalMap.querySelector(".close-modal");
+
+  buttonSmallMap.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    modalMap.classList.add("modal-show");
+  });
+
+  modalMapClose.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    modalMap.classList.remove("modal-show");
+  });
+
+}
+
+// Окно "Добавить в корзину"
+const allBuyButtons = document.querySelectorAll(".buy-button");
+const modalCardAdd = document.querySelector(".card-add");
+
+if (modalCardAdd) {
+  const modalCardAddClose = document.querySelector(".close-modal");
+
+  allBuyButtons.forEach((item) => {
+    item.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      modalCardAdd.classList.add("modal-show");
+    });
+  });
+
+
+  modalCardAddClose.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    modalCardAdd.classList.remove("modal-show");
+  });
+}
+
+let isStorageSupport = true;
+let storage = "";
+
+try {
+  storage = localStorage.getItem("login");
+} catch (err) {
+  isStorageSupport = false;
+}
+
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    evt.preventDefault();
+    if (modalWriteUs && modalWriteUs.classList.contains("modal-show")) {
+      modalWriteUs.classList.remove("modal-show");
+      modalWriteUs.classList.remove("modal-error");
+    }
+    if (modalMap && modalMap.classList.contains("modal-show")) {
+      modalMap.classList.remove("modal-show");
+    }
+    if (modalCardAdd && modalCardAdd.classList.contains("modal-show")) {
+      modalCardAdd.classList.remove("modal-show");
+    }
+  }
+});
+
+// Слайдер "Сервисы"
+const allServicesButtons = document.querySelectorAll(".services-menu button");
+const allServicesBlocks = document.querySelectorAll(".services-main .services-block");
+
+
+
+if (allServicesButtons && allServicesBlocks) {
+  const removeServicesButtonsClass = function () {
+    allServicesButtons.forEach((item) => {
+      item.classList.remove("services-menu__active");
+    });
+  }
+
+  const changeServicesBlocksClass = function (id) {
+    allServicesBlocks.forEach((item) => {
+      if (item.dataset.id === id) {
+        item.classList.add("services-block__active");
+      } else {
+        item.classList.remove("services-block__active");
+      }
+    });
+  }
+
+  allServicesButtons.forEach((item) => {
+    item.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      removeServicesButtonsClass();
+      changeServicesBlocksClass(item.id);
+      item.classList.add("services-menu__active");
+    });
+  });
+}
+
+// Слайдер "Промо"
+const promoSlider = document.querySelector(".promo-slider");
+if (promoSlider) {
+  const allPromoSliderSlides = promoSlider.querySelectorAll(".promo-slider__slide");
+  const promoSliderButtonLeft = promoSlider.querySelector(".slider-button__left");
+  const promoSliderButtonRight = promoSlider.querySelector(".slider-button__right");
+  let currentSlide;
+  let maxSlides = allPromoSliderSlides.length - 1;
+
+  const checkActiveSlide = function () {
+    for (let i = 0; i < allPromoSliderSlides.length; i++) {
+      if (allPromoSliderSlides[i].classList.contains("promo-slider__active")) {
+        currentSlide = i;
+      }
+    }
+  }
+
+
+
+  promoSliderButtonLeft.addEventListener("click", function (evt) {
+    checkActiveSlide();
+    allPromoSliderSlides[currentSlide].classList.remove("promo-slider__active");
+    if (currentSlide === 0) {
+      currentSlide = maxSlides;
+    } else {
+      currentSlide = currentSlide - 1;
+    }
+    if (currentSlide < 0) {
+      currentSlide = allPromoSliderSlides.length - 1;
+    }
+    allPromoSliderSlides[currentSlide].classList.add("promo-slider__active");
+  });
+
+  promoSliderButtonRight.addEventListener("click", function (evt) {
+    checkActiveSlide();
+    allPromoSliderSlides[currentSlide].classList.remove("promo-slider__active");
+    currentSlide = currentSlide + 1;
+    if (currentSlide > (allPromoSliderSlides.length - 1)) {
+      currentSlide = 0;
+    }
+    allPromoSliderSlides[currentSlide].classList.add("promo-slider__active");
+  });
+}

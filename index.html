@@ -11,7 +11,7 @@
     href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap&subset=cyrillic,cyrillic-ext"
     rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
 <body>
@@ -21,7 +21,8 @@
         <a class="logo"><img class="logo-image" src="img/logo-technomart.svg" alt="Логотип сайта" width="109"
             height="19"></a>
         <form class="search-form">
-          <input class="search" type="search" name="q" placeholder="Поиск:">
+          <label class="search-label" for="site-search">Поиск</label>
+          <input class="search" id="site-search" type="search" name="q" placeholder="Поиск:">
           <button class="search-submit" type="submit">
             <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
               <path
@@ -106,10 +107,9 @@
 
   <main class="main-container">
     <section class="promo container">
-      <div class="promo-materials promo-block">
-        <div class="flag flag-new">новинка</div>
+      <div class="promo-materials promo-block new">
         <h4 class="promo-block__name">Материалы</h4>
-        <button class="promo-tagline">на любой вкус</button>
+        <a href="catalog.html" class="promo-tagline">на любой вкус</a>
         <svg class="promo-block__icon materials-icon" xmlns="http://www.w3.org/2000/svg" width="44" height="65"
           viewBox="0 0 44 65">
           <g fill="#FFF">
@@ -123,7 +123,7 @@
 
       <div class="promo-tool promo-block">
         <h4 class="promo-block__name">Инструмент</h4>
-        <button class="promo-tagline">на все случаи</button>
+        <a href="catalog.html" class="promo-tagline">на все случаи</a>
         <svg class="promo-block__icon" xmlns="http://www.w3.org/2000/svg" width="75" height="61" viewBox="0 0 75 61">
           <g fill="#FFF">
             <path
@@ -134,7 +134,7 @@
 
       <div class="promo-equipment promo-block">
         <h4 class="promo-block__name">Техника</h4>
-        <button class="promo-tagline">для стройки</button>
+        <a href="catalog.html" class="promo-tagline">для стройки</a>
         <svg class="promo-block__icon" xmlns="http://www.w3.org/2000/svg" width="78" height="62" viewBox="0 0 78 62">
           <g fill="#FFF">
             <path
@@ -164,12 +164,12 @@
           <a class="promo-slider__link" href="catalog.html">Открыть каталог</a>
         </div>
 
-        <button class="slider-button__left">
+        <button aria-label="Слайд назад" class="slider-button__left">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="40" viewBox="0 0 22 40">
             <path fill="#FFF" d="M19.83-.035l2.089 2.099L4.13 19.947l17.847 17.939-2.09 2.099L-.048 19.947z" />
           </svg>
         </button>
-        <button class="slider-button__right">
+        <button aria-label="Слайд вперёд" class="slider-button__right">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="40" viewBox="0 0 22 40">
             <path fill="#FFF" d="M2.098-.035L.009 2.064l17.789 17.883L-.048 37.886l2.089 2.099 19.935-20.038z" />
           </svg>
@@ -183,7 +183,7 @@
       <div class="slider-left">
         <div class="promo-discounts promo-block">
           <h4 class="promo-block__name">Скидки 50%</h4>
-          <button class="promo-tagline">На 350 товаров</button>
+          <a href="catalog.html" class="promo-tagline">На 350 товаров</a>
           <svg class="promo-block__icon discount-icon" xmlns="http://www.w3.org/2000/svg" width="59" height="72"
             viewBox="0 0 59 72">
             <g fill="#FFF">
@@ -199,7 +199,7 @@
 
         <div class="promo-delivery promo-block">
           <h4 class="promo-block__name">Доставка</h4>
-          <button class="promo-tagline">бесплатно</button>
+          <a href="catalog.html" class="promo-tagline">бесплатно</a>
           <svg class="promo-block__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             width="78" height="63" viewBox="0 0 78 63">
             <g fill="#FFF">
@@ -275,8 +275,7 @@
           <div class="goods-price">15500 Р.</div>
         </article>
 
-        <article class="goods-card">
-          <div class="flag flag-new">новинка</div>
+        <article class="goods-card new">
           <div class="goods-buttons">
             <button class="buy-button" type="button">
               <svg class="buy-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
@@ -389,7 +388,7 @@
     <section class="container">
       <div class="about">
         <div class="about-block">
-          <h1 class="about-block__name">КОМПАНИЯ «Техномарт»</h1>
+          <h1 class="about-block__name">Компания «Техномарт»</h1>
           <p class="about-block__text">
             Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для
             ремонта и строительства не оставит равнодушными любителей сэкономить
@@ -409,13 +408,13 @@
         </div>
 
         <div class="about-block__contacts">
-          <h3 class="about-block__name">КОНТАКТЫ</h3>
+          <h3 class="about-block__name">Контакты</h3>
           <p class="about-block__text contacts-block__small">
             Вы можете забрать товар сами, заехав&nbsp;в&nbsp;наш&nbsp;офис:
           </p>
-          <a class="map-small" href="#link_to_googleMap"><img width="300" height="160" src="img/map.jpg"
+          <a href="map.html" class="map-small"><img width="300" height="160" src="img/map.jpg"
               alt="Карта маленького размера" /></a>
-          <button class="site-button map-company__button" type="button">Заблудились? НапиШИТЕ НАМ!</button>
+          <a href="form.html" class="site-button map-company__button" type="button">Заблудились? Напишите нам!</a>
         </div>
       </div>
     </section>
@@ -460,7 +459,8 @@
         <ul class="footer-social">
           <li>
             <a href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="15" viewBox="0 0 26 15">
+              <svg aria-label="Иконка Вконтакте" xmlns="http://www.w3.org/2000/svg" width="26" height="15"
+                viewBox="0 0 26 15">
                 <path fill="#FFF"
                   d="M16.138 11.51c.956-.309 2.18 2.04 3.483 2.939.978.681 1.727.534 1.727.534l3.473-.05s1.815-.112.957-1.554c-.071-.12-.503-1.069-2.585-3.022-2.177-2.043-1.882-1.712.739-5.244 1.597-2.153 2.236-3.468 2.036-4.028-.192-.539-1.365-.399-1.365-.399L20.69.713c-.381.001-.704.119-.851.515-.003.004-.621 1.666-1.445 3.079-1.741 2.989-2.436 3.148-2.724 2.961-.661-.433-.494-1.737-.494-2.664 0-2.897.432-4.105-.846-4.417-.427-.104-.739-.172-1.828-.182-1.392-.021-2.574 0-3.244.329-.445.223-.786.712-.579.74.26.035.843.16 1.155.586.401.552.389 1.789.389 1.789s.229 3.411-.54 3.834c-.528.29-1.25-.302-2.803-3.016-.793-1.388-1.392-2.922-1.392-2.922s-.116-.285-.326-.441c-.25-.185-.6-.244-.6-.244L.848.684S.29.7.085.946c-.182.218-.015.668-.015.668s2.909 6.881 6.203 10.347c3.02 3.182 6.452 2.971 6.452 2.971h1.555s.469-.054.709-.312c.224-.24.214-.691.214-.691s-.031-2.109.935-2.419z" />
               </svg>
@@ -468,14 +468,16 @@
           </li>
           <li>
             <a href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22">
+              <svg aria-label="Иконка Facebook" xmlns="http://www.w3.org/2000/svg" width="12" height="22"
+                viewBox="0 0 12 22">
                 <path fill="#FFF" d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4z" />
               </svg>
             </a>
           </li>
           <li>
             <a href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+              <svg aria-label="Иконка Instagram" xmlns="http://www.w3.org/2000/svg" width="21" height="21"
+                viewBox="0 0 21 21">
                 <path fill="#FFF"
                   d="M18 0H3C1.35 0 0 1.35 0 3v15c0 1.65 1.35 3 3 3h15c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zm-7.5 7c1.93 0 3.5 1.57 3.5 3.5S12.43 14 10.5 14 7 12.43 7 10.5 8.57 7 10.5 7zM18 18H3V9h1.181A6.504 6.504 0 0 0 4 10.5a6.5 6.5 0 1 0 13 0 6.45 6.45 0 0 0-.181-1.5H18v9zm0-11h-4V3h4v4z" />
               </svg>
@@ -538,7 +540,7 @@
     </button>
   </div>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.min.js"></script>
 
 </body>
 
