@@ -112,13 +112,8 @@ a {
   opacity: 1;
 }
 
-.search:focus+.search-label {
-  display: none;
-}
-
 .search-form input::placeholder {
   color: #fff;
-  opacity: 0;
 }
 
 
@@ -1626,11 +1621,9 @@ button.services-menu__active {
 
 .search-label {
   position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-  left: 48px;
   color: #ffffff;
   cursor: text;
+  color: transparent;
 }
 
 .map-modal {
