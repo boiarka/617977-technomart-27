@@ -1622,7 +1622,11 @@ button.services-menu__active {
 
 .search-label {
   position: absolute;
-  top: -200px;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 48px;
+  color: #ffffff;
+  z-index: -1;
 }
 
 .map-modal {
