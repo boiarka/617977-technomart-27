@@ -1621,7 +1621,9 @@ button.services-menu__active {
 }
 
 .search-label {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .map-modal {
